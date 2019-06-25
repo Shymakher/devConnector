@@ -6,6 +6,7 @@ import store from './store';
 
 import PrivateRoute from './routing/PrivateRoute';
 
+import TestComponent from './componets/TestComponent';
 import NavBar from './componets/layout/Navbar';
 import Landing from './componets/layout/Landing';
 import Register from './componets/auth/Register';
@@ -15,6 +16,8 @@ import CreateProfile from './componets/profile-forms/CreateProfile';
 import EditProfile from './componets/profile-forms/EditProfile';
 import AddExperience from './componets/profile-forms/AddExperience';
 import AddEducation from './componets/profile-forms/AddEducation';
+import Profiles from './componets/profiles/Profiles';
+import Profile from './componets/profile/Profile';
 
 import Alert from './componets/layout/Alert';
 
@@ -44,6 +47,9 @@ const App = () => {
             <Switch>
               <Route exact path="/register" component={Register}/>
               <Route exact path="/login" component={Login}/>
+              <Route exact path="/profiles" component={Profiles}/>
+              <Route exact path="/profile/:id" component={Profile}/>
+              <Route exact path="/test" component={TestComponent}/>
               <PrivateRoute exact path="/dashboard" component={Dashboard}/>
               <PrivateRoute exact path="/create-profile" component={CreateProfile}/>
               <PrivateRoute exact path="/edit-profile" component={EditProfile}/>
@@ -55,6 +61,6 @@ const App = () => {
       </Router>
     </Provider>
   )
-}
+};
 
 export default App;
