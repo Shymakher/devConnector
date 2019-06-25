@@ -154,6 +154,18 @@ img {
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
+  animation: mymove 1s ease-in;
+}
+
+@keyframes mymove {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btn-primary,
@@ -261,6 +273,19 @@ img {
 .form input[type='submit'],
 button {
   font: inherit;
+}
+
+.social-group {
+  visibility: hidden;
+  opacity: 0;
+  animation-delay: 1s;
+  transition: 1s ease-in-out;
+}
+
+.social-group.active {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s ease-in-out;
 }
 
 .form .social-input {
