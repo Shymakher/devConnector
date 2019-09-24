@@ -375,7 +375,13 @@ button {
 }
 
 /* Profiles Page */
+.profiles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .profile {
+  width: 500px;
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
   align-items: center;
