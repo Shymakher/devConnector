@@ -2,4 +2,3 @@ node_modules/
 .idea/
 
 default.json
-production.json
