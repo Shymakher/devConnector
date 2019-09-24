@@ -5,7 +5,7 @@ import {addComment, deleteComment} from "../../actions/post";
 
 const CommentForm = ({addComment, deleteComment, postId}) => {
     const [text, setText] = useState('');
-
+    //comment
     return (
       <div className="post-form">
         <div className="bg-primary p">
